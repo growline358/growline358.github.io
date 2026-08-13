@@ -819,3 +819,116 @@ footer.site-footer a {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ============================================================
+   Growline トップページ（index.html 専用）
+   ============================================================ */
+
+.gl-hero {
+  text-align: center;
+  padding: 48px 0 40px;
+}
+
+.gl-hero-glyph {
+  width: 180px;
+  height: 48px;
+  margin: 0 auto 28px;
+  color: var(--sprout-light);
+}
+
+.gl-hero-glyph svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gl-hero-name {
+  font-size: clamp(24px, 5vw, 30px);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin: 0 0 20px;
+  color: var(--ink);
+}
+
+.gl-hero-name span {
+  color: var(--accent);
+}
+
+.gl-hero-tagline {
+  font-size: clamp(30px, 7.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 18px;
+  color: var(--ink);
+}
+
+.gl-hero-sub {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.gl-app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  max-width: 420px;
+  margin: 28px auto 0;
+}
+
+.gl-app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding: 28px 28px 24px;
+  text-align: left;
+}
+
+.gl-app-card .icon-sprout {
+  width: 24px;
+  height: 24px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.gl-app-card .gl-app-link {
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.gl-apps-note {
+  margin: 24px 0 0;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+.gl-growth {
+  text-align: center;
+}
+
+.gl-growth-glyph {
+  width: 220px;
+  height: 56px;
+  margin: 0 auto 20px;
+  color: var(--sprout-light);
+  opacity: 0.9;
+}
+
+.gl-growth-glyph svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gl-growth-caption {
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+@media (min-width: 760px) {
+  .gl-hero {
+    padding: 88px 0 64px;
+  }
+}

@@ -4,33 +4,114 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Growline</title>
-<meta name="description" content="Growlineが開発しているアプリの一覧とサポート情報">
+<meta name="description" content="小さく積み重ねて、線にする。Growlineは、小さなアイデアや制作を積み重ねながら育てていく個人開発ブランドです。">
+<link rel="icon" href="./assets/favicon.png">
 <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-sprout" viewBox="0 0 24 24" fill="none">
+    <path d="M12 21V12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M12 13C12 13 6.2 12.6 6.2 6.6C6.2 6.6 12 6.1 12 13Z" fill="currentColor" opacity="0.85"/>
+    <path d="M12 10.2C12 10.2 17.8 9.7 17.8 4C17.8 4 12 3.5 12 10.2Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="icon-growthline" viewBox="0 0 300 80" fill="none">
+    <path d="M20 62 C 60 58, 70 52, 95 48 C 120 44, 145 38, 170 32 C 195 26, 220 22, 245 18 C 258 16, 268 14, 278 12"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+    <circle cx="20" cy="62" r="4" fill="currentColor" opacity="0.4"/>
+    <circle cx="95" cy="48" r="5" fill="currentColor" opacity="0.6"/>
+    <circle cx="170" cy="32" r="6" fill="currentColor" opacity="0.8"/>
+    <circle cx="245" cy="18" r="7" fill="currentColor"/>
+    <circle cx="278" cy="12" r="7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="3 3" opacity="0.7"/>
+  </symbol>
+</svg>
+
 <div class="wrap">
   <header class="site-header">
     <a class="logo" href="./">Grow<span>line</span></a>
     <nav class="site-nav">
-      <a href="./contact/">Contact</a>
+      <a href="#apps">Apps</a>
+      <a href="./contact/">お問い合わせ</a>
     </nav>
   </header>
 
-  <main>
-    <h1>Growline</h1>
-    <p class="lede">小さく積み重ねて、線にする。個人開発でアプリを作っています。</p>
+  <main class="landing">
 
-    <h2>Apps</h2>
-    <a class="app-card" href="./apps/daily-plus/">
-      <div class="app-name">Daily+</div>
-      <p class="app-desc">お金を生み出すエンジンを育てる、資産管理アプリ</p>
-    </a>
+    <!-- Hero -->
+    <section class="gl-hero">
+      <div class="gl-hero-glyph" aria-hidden="true">
+        <svg aria-hidden="true"><use href="#icon-growthline"></use></svg>
+      </div>
+      <h1 class="gl-hero-name">Grow<span>line</span></h1>
+      <p class="gl-hero-tagline">小さく積み重ねて<br>線にする</p>
+      <p class="gl-hero-sub">個人開発で、小さくアプリをつくっています。</p>
+    </section>
+
+    <!-- Growlineの考え方 -->
+    <section class="story reveal">
+      <div class="section-inner" style="text-align:center;">
+        <p class="eyebrow">Growlineの考え方</p>
+        <h2>大きく始めるのではなく<br>小さく育てる</h2>
+        <p>
+          Growlineは、最初から大きなサービスを目指す場所ではありません。小さなアイデアや改善を、
+          ひとつずつ形にしていく個人開発ブランドです。
+        </p>
+        <p>
+          うまくいくかどうかより、まず作ってみる。使いながら育てる。その積み重ねが、
+          少しずつ線になっていきます。
+        </p>
+      </div>
+    </section>
+
+    <!-- Apps -->
+    <section class="gl-apps reveal" id="apps">
+      <div class="section-inner" style="max-width:var(--width-landing); text-align:center;">
+        <p class="eyebrow">Apps</p>
+        <h2>はじまりは、Daily+から</h2>
+        <div class="gl-app-grid">
+          <a class="app-card gl-app-card" href="./apps/daily-plus/">
+            <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+            <div class="app-name">Daily+</div>
+            <p class="app-desc">稼ぐ力を、毎日育てる。</p>
+            <span class="gl-app-link">Daily+公式サイトへ &rarr;</span>
+          </a>
+        </div>
+        <p class="gl-apps-note">これからアプリが増えるたびに、ここに積み重なっていきます。</p>
+      </div>
+    </section>
+
+    <!-- 積み重ね -->
+    <section class="gl-growth reveal">
+      <div class="section-inner" style="text-align:center;">
+        <div class="gl-growth-glyph" aria-hidden="true">
+          <svg aria-hidden="true"><use href="#icon-growthline"></use></svg>
+        </div>
+        <p class="gl-growth-caption">
+          作ったものが、少しずつ増えていく。<br>
+          小さな制作が、いつか一本の線になる。
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="cta-final reveal">
+      <p>何かあれば、気軽に声をかけてください。</p>
+      <a class="btn-primary" href="./contact/">お問い合わせ</a>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <span>&copy; Growline</span>
-    <a href="./contact/">Contact</a>
+    <a href="./">Growline</a>
+    <a href="#apps">Apps</a>
+    <a href="./contact/">お問い合わせ</a>
+    <a href="./apps/daily-plus/privacy/">プライバシーポリシー</a>
+    <a href="./apps/daily-plus/terms/">利用規約</a>
   </footer>
 </div>
+
+<script src="./assets/js/reveal.js" defer></script>
 </body>
 </html>
