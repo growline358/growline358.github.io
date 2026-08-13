@@ -194,3 +194,508 @@ footer.site-footer a {
   text-decoration: none;
   margin-top: 8px;
 }
+
+/* ============================================================
+   Daily+ ブランドランディング（apps/daily-plus/index.html 専用）
+   既存クラス・トークンは変更せず、ここから下に追記する。
+   ============================================================ */
+
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --coin: #e8a317;
+  --sprout-light: #8bc63f;
+  --font-numeric: "Quicksand", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "Noto Sans JP",
+    sans-serif;
+  --width-landing: 1120px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --coin: #f3b74a;
+    --sprout-light: #a8db5c;
+  }
+}
+
+/* オーナーが明示的にライトを選んだ場合は常にライトトークンを使う */
+:root[data-theme="light"] {
+  --coin: #e8a317;
+  --sprout-light: #8bc63f;
+}
+:root[data-theme="dark"] {
+  --coin: #f3b74a;
+  --sprout-light: #a8db5c;
+}
+
+.wrap--wide {
+  max-width: var(--width-landing);
+}
+
+.landing section {
+  padding: 56px 0;
+  max-width: 100%;
+}
+
+.landing .section-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: var(--font-numeric);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  margin: 0 0 10px;
+}
+
+.landing h2 {
+  font-size: 24px;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.landing p {
+  line-height: 1.9;
+}
+
+/* ---- ヘッダーのDaily+ロゴ（daily-plusページ専用） ---- */
+
+.logo-daily {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-daily .icon-sprout {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* ---- 「考え方」セクションの控えめな成長モチーフ ---- */
+
+.story-glyph {
+  width: 34px;
+  height: 34px;
+  margin: 36px auto;
+  color: var(--sprout-light);
+  opacity: 0.8;
+}
+
+.story-glyph svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  position: relative;
+  padding: 32px 0 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: -25% -25% auto -25%;
+  height: 560px;
+  background: radial-gradient(40% 40% at 28% 22%, rgba(139, 198, 63, 0.32), transparent 60%),
+    radial-gradient(32% 32% at 78% 10%, rgba(232, 163, 23, 0.16), transparent 60%);
+  filter: blur(48px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-bg {
+    background: radial-gradient(40% 40% at 28% 22%, rgba(168, 219, 92, 0.16), transparent 60%),
+      radial-gradient(32% 32% at 78% 10%, rgba(243, 183, 74, 0.1), transparent 60%);
+  }
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-numeric);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin: 0 0 4px;
+}
+
+.hero-eyebrow .icon-sprout {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.hero-title {
+  font-size: clamp(28px, 7vw, 40px);
+  font-weight: 700;
+  line-height: 1.45;
+  margin: 0;
+  color: var(--ink);
+}
+
+.hero-sub {
+  font-size: 16px;
+  color: var(--ink-soft);
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.9;
+}
+
+.hero-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-cta-note {
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  border: none;
+  box-shadow: 0 10px 24px -10px rgba(47, 158, 79, 0.5);
+}
+
+.btn-primary--soon {
+  background: var(--surface);
+  color: var(--accent);
+  border: 1.5px solid var(--accent);
+  box-shadow: none;
+  cursor: default;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-frame {
+  position: relative;
+  width: 220px;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 6px solid var(--ink);
+  background: var(--ink);
+  box-shadow: 0 28px 52px -22px rgba(28, 40, 48, 0.4);
+}
+
+.phone-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 760px) {
+  .hero {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    padding: 88px 0 104px;
+    gap: 56px;
+  }
+  .hero-copy {
+    flex: 1;
+    min-width: 0;
+  }
+  .hero-sub {
+    margin: 0;
+  }
+  .hero-cta {
+    align-items: flex-start;
+  }
+  .phone-frame {
+    width: 250px;
+  }
+}
+
+/* ---- Split layout: 考え方 / 今日の日給 / 成長を見る で共有 ---- */
+
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+
+.split .split-visual {
+  width: 100%;
+  max-width: 260px;
+  flex-shrink: 0;
+}
+
+.split .split-visual img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  box-shadow: 0 22px 44px -26px rgba(28, 40, 48, 0.32);
+}
+
+.split .split-body {
+  text-align: center;
+}
+
+@media (min-width: 760px) {
+  .split {
+    flex-direction: row;
+    align-items: center;
+    gap: 64px;
+  }
+  .split.split-reverse {
+    flex-direction: row-reverse;
+  }
+  .split .split-body {
+    flex: 1;
+    text-align: left;
+  }
+  .split .split-body .eyebrow,
+  .split .split-body h2,
+  .split .split-body p {
+    margin-left: 0;
+  }
+}
+
+.metric-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.metric-list li {
+  padding-left: 20px;
+  position: relative;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.metric-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sprout-light);
+}
+
+.metric-list strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.promise-card {
+  margin-top: 24px;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 14px;
+  color: var(--ink-soft);
+  line-height: 1.9;
+  text-align: left;
+}
+
+.promise-card strong {
+  color: var(--accent);
+}
+
+/* ---- Features ---- */
+
+.features .section-inner {
+  max-width: var(--width-landing);
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 28px;
+  text-align: left;
+}
+
+.feature-card {
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.feature-card .icon-sprout {
+  width: 22px;
+  height: 22px;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.feature-card h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  color: var(--ink);
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 640px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- App Preview ---- */
+
+.app-preview .section-inner {
+  max-width: var(--width-landing);
+  text-align: center;
+}
+
+.preview-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 28px 4px 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.preview-item {
+  flex: 0 0 auto;
+  width: 190px;
+  scroll-snap-align: center;
+  text-align: center;
+}
+
+.preview-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  box-shadow: 0 18px 36px -20px rgba(28, 40, 48, 0.32);
+}
+
+.preview-item span {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--ink-soft);
+}
+
+@media (min-width: 760px) {
+  .preview-scroll {
+    overflow: visible;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* ---- CTA (最終) ---- */
+
+.cta-final {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.cta-final h2 {
+  font-size: 26px;
+}
+
+.cta-final p {
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+@media (min-width: 760px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* ---- Scroll reveal（progressive enhancement） ---- */
+
+.reveal {
+  opacity: 1;
+  transform: none;
+}
+
+.js-ready .reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.js-ready .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-ready .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

@@ -4,33 +4,194 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daily+ | Growline</title>
-<meta name="description" content="お金を生み出すエンジンを育てる、資産管理アプリ Daily+">
+<meta name="description" content="「今いくら持っているか」ではなく、「稼ぐ力」を毎日育てるお金アプリ Daily+。資産という名のエンジンが生み出す「今日の日給」を、毎日見える化します。">
+<link rel="icon" href="../../assets/favicon.png">
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
-<div class="wrap">
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-sprout" viewBox="0 0 24 24" fill="none">
+    <path d="M12 21V12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M12 13C12 13 6.2 12.6 6.2 6.6C6.2 6.6 12 6.1 12 13Z" fill="currentColor" opacity="0.85"/>
+    <path d="M12 10.2C12 10.2 17.8 9.7 17.8 4C17.8 4 12 3.5 12 10.2Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<div class="wrap wrap--wide">
   <header class="site-header">
-    <a class="logo" href="../../">Grow<span>line</span></a>
+    <a class="logo logo-daily" href="./">
+      <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+      Daily<span>+</span>
+    </a>
     <nav class="site-nav">
+      <a href="../../">Growline</a>
       <a href="../../contact/">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <a class="back-link" href="../../">&larr; Growline</a>
-    <h1>Daily+</h1>
-    <p class="lede">保有している資産などから生まれる「日給」を記録し、育てていく資産管理アプリです。</p>
+  <main class="landing">
 
-    <div class="app-links">
-      <a href="./privacy/">プライバシーポリシー</a>
-      <a href="./terms/">利用規約</a>
-    </div>
+    <!-- 1. Hero -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <p class="hero-eyebrow">
+          <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+          Daily+
+        </p>
+        <h1 class="hero-title">稼ぐ力を、<br>毎日育てる。</h1>
+        <p class="hero-sub">Daily+は、あなたの「稼ぐ力」と「お金の成長」を<br>1日単位で見える化するアプリ。</p>
+        <div class="hero-cta">
+          <a class="btn-primary" href="https://apps.apple.com/jp/app/daily/id6795846940" target="_blank" rel="noopener">App Storeでダウンロード</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="phone-frame">
+          <img src="./assets/hero-home.webp" alt="Daily+のホーム画面。本日の日給¥3,766/日、これまでの積み上げ、次の目標までの金額が表示されている" width="220" height="476">
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Daily+の考え方 -->
+    <section class="story reveal">
+      <div class="section-inner" style="text-align:center;">
+        <p class="eyebrow">Daily+の考え方</p>
+        <h2>「今日の自分のお金は、<br>どれくらい成長している？」</h2>
+        <div class="story-glyph" aria-hidden="true">
+          <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+        </div>
+        <p>
+          一般的な資産管理アプリが見せるのは、「今いくら持っているか」という残高です。けれど残高は、
+          毎日ながめても変わりません。
+        </p>
+        <p>
+          Daily+が見せるのは、あなたの資産という「エンジン」が、今日1日でどれくらいの力を生み出しているか
+          ——「日給」です。「管理する」のではなく、「育てる」。それがDaily+の考え方です。
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. 今日の日給 -->
+    <section class="metric-explain reveal">
+      <div class="section-inner" style="max-width:var(--width-landing);">
+        <div class="split">
+          <div class="split-visual">
+            <img src="./assets/preview-home.webp" alt="Daily+のホーム画面。本日の日給・先月比・次の目標までの3つの指標が並んでいる" loading="lazy" width="900" height="1947">
+          </div>
+          <div class="split-body">
+            <p class="eyebrow">今日の日給</p>
+            <h2>ホームで見るのは、<br>この3つだけ。</h2>
+            <ul class="metric-list">
+              <li><strong>本日の日給</strong>保有しているエンジン全体が、今日1日で生み出している金額</li>
+              <li><strong>先月比</strong>1か月前と比べて、伸びているかどうか</li>
+              <li><strong>次の目標まで</strong>設定した目標日給まで、あと何円か</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 成長を見る -->
+    <section class="growth reveal">
+      <div class="section-inner" style="max-width:var(--width-landing);">
+        <div class="split split-reverse">
+          <div class="split-visual">
+            <img src="./assets/preview-trend-weekly.webp" alt="Daily+の推移画面。日給の推移グラフと、日ごとの変化の記録が並んでいる" loading="lazy" width="900" height="1947">
+          </div>
+          <div class="split-body">
+            <p class="eyebrow">成長を見る</p>
+            <h2>積み重ねてきた線の形を見る。</h2>
+            <p>
+              推移は、週・月・全期間で振り返れます。大切なのは、日々の上下に一喜一憂することではなく、
+              積み重ねてきた線の形を見ること。
+            </p>
+            <div class="promise-card">
+              <strong>Daily+の約束</strong><br>
+              ここでは、誰かより優れている必要はありません。<br>
+              比べるのは、他人ではなく過去の自分だけです。
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Features -->
+    <section class="features reveal">
+      <div class="section-inner">
+        <p class="eyebrow">Features</p>
+        <h2>毎日育てるための、4つの機能。</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+            <h3>対応エンジン</h3>
+            <p>仮想通貨・株・FX・その他、幅広い資産に対応。利回りを入力する方式でも、日給を直接入力する方式でも登録できます。</p>
+          </div>
+          <div class="feature-card">
+            <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+            <h3>推移グラフ</h3>
+            <p>週・月・全期間で日給の推移をグラフ表示。資産を追加・変更した「成長イベント」も一緒に振り返れます。</p>
+          </div>
+          <div class="feature-card">
+            <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+            <h3>積み上げ</h3>
+            <p>今日の一歩を記録する「積み上げ」機能。公開・非公開を選べて、フォロワーもランキングもありません。</p>
+          </div>
+          <div class="feature-card">
+            <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+            <h3>安心設計</h3>
+            <p>エンジンの登録情報は常に端末内に保存。アカウント登録は不要で、投資助言も行いません。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. App Preview -->
+    <section class="app-preview reveal">
+      <div class="section-inner">
+        <p class="eyebrow">App Preview</p>
+        <h2>画面を見てみる。</h2>
+        <div class="preview-scroll">
+          <div class="preview-item">
+            <img src="./assets/preview-home.webp" alt="ホーム画面" loading="lazy" width="900" height="1947">
+            <span>ホーム</span>
+          </div>
+          <div class="preview-item">
+            <img src="./assets/preview-trend-weekly.webp" alt="推移画面（週次）" loading="lazy" width="900" height="1947">
+            <span>推移（週次）</span>
+          </div>
+          <div class="preview-item">
+            <img src="./assets/preview-trend-detail.webp" alt="推移画面（個別資産の成長履歴）" loading="lazy" width="900" height="1947">
+            <span>成長履歴</span>
+          </div>
+          <div class="preview-item">
+            <img src="./assets/preview-stack.webp" alt="積み上げ画面" loading="lazy" width="900" height="1947">
+            <span>積み上げ</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CTA -->
+    <section class="cta-final reveal" id="cta-final">
+      <p class="eyebrow">今日から、育てよう。</p>
+      <h2>小さな積み上げが、<br class="mobile-only">明日の日給になる。</h2>
+      <a class="btn-primary" href="https://apps.apple.com/jp/app/daily/id6795846940" target="_blank" rel="noopener">App Storeでダウンロード</a>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <span>&copy; Growline</span>
-    <a href="../../contact/">Contact</a>
+    <a href="./privacy/">Privacy Policy</a>
+    <a href="./terms/">Terms of Use</a>
+    <a href="../../contact/">Support</a>
+    <a href="https://apps.apple.com/jp/app/daily/id6795846940" target="_blank" rel="noopener">App Store</a>
   </footer>
 </div>
+
+<script src="../../assets/js/reveal.js" defer></script>
 </body>
 </html>
