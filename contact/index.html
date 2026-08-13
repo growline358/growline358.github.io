@@ -5,9 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Growline</title>
 <meta name="description" content="Growlineへのお問い合わせ">
+<link rel="icon" href="../assets/favicon.png">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-sprout" viewBox="0 0 24 24" fill="none">
+    <path d="M12 21V12.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M12 13C12 13 6.2 12.6 6.2 6.6C6.2 6.6 12 6.1 12 13Z" fill="currentColor" opacity="0.85"/>
+    <path d="M12 10.2C12 10.2 17.8 9.7 17.8 4C17.8 4 12 3.5 12 10.2Z" fill="currentColor"/>
+  </symbol>
+</svg>
+
 <div class="wrap">
   <header class="site-header">
     <a class="logo" href="../">Grow<span>line</span></a>
@@ -16,17 +26,43 @@
     </nav>
   </header>
 
-  <main>
-    <a class="back-link" href="../">&larr; Growline</a>
-    <h1>Contact</h1>
-    <p class="lede">アプリに関するご意見・ご要望・不具合報告など、お気軽にご連絡ください。</p>
-    <a class="contact-email" href="mailto:dailyplus358@gmail.com">dailyplus358@gmail.com</a>
+  <main class="landing contact-page">
+    <section class="contact-hero reveal">
+      <div class="contact-hero-bg" aria-hidden="true"></div>
+      <p class="eyebrow">CONTACT</p>
+      <h1>Growlineに、<br class="mobile-only">声を届ける。</h1>
+      <p class="contact-lede">アプリに関するご意見・ご要望・不具合報告など、お気軽にご連絡ください。</p>
+    </section>
+
+    <section class="contact-card-section reveal">
+      <div class="contact-card">
+        <svg class="icon-sprout" aria-hidden="true"><use href="#icon-sprout"></use></svg>
+        <p class="contact-card-email">dailyplus358@gmail.com</p>
+        <a class="btn-primary" href="mailto:dailyplus358@gmail.com">メールを送る</a>
+      </div>
+    </section>
+
+    <section class="contact-examples reveal">
+      <p class="eyebrow" style="text-align:center;">こんなご連絡をいただいています</p>
+      <ul class="example-list">
+        <li>アプリについてのご意見</li>
+        <li>改善してほしいこと</li>
+        <li>不具合のご報告</li>
+        <li>その他のお問い合わせ</li>
+      </ul>
+    </section>
   </main>
 
   <footer class="site-footer">
     <span>&copy; Growline</span>
+    <a href="../">Growline</a>
     <a href="../">Apps</a>
+    <a href="../apps/daily-plus/privacy/">Privacy Policy</a>
+    <a href="../apps/daily-plus/terms/">Terms of Use</a>
+    <a href="./">Support</a>
   </footer>
 </div>
+
+<script src="../assets/js/reveal.js" defer></script>
 </body>
 </html>

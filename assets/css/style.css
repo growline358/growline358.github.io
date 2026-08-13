@@ -699,3 +699,123 @@ footer.site-footer a {
     transition: none;
   }
 }
+
+/* ============================================================
+   Contact ページ（contact/index.html 専用）
+   ============================================================ */
+
+.contact-hero {
+  position: relative;
+  text-align: center;
+  padding: 56px 0 40px;
+  overflow: hidden;
+}
+
+.contact-hero-bg {
+  position: absolute;
+  inset: -30% -25% auto -25%;
+  height: 380px;
+  background: radial-gradient(45% 45% at 50% 20%, rgba(139, 198, 63, 0.28), transparent 62%);
+  filter: blur(44px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .contact-hero-bg {
+    background: radial-gradient(45% 45% at 50% 20%, rgba(168, 219, 92, 0.14), transparent 62%);
+  }
+}
+
+.contact-hero h1 {
+  font-size: clamp(26px, 6vw, 34px);
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+
+.contact-lede {
+  max-width: 400px;
+  margin: 0 auto;
+  color: var(--ink-soft);
+}
+
+.contact-card-section {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 56px;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 32px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 48px -30px rgba(28, 40, 48, 0.25);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact-card .icon-sprout {
+  width: 32px;
+  height: 32px;
+  color: var(--sprout-light);
+}
+
+.contact-card-email {
+  font-family: var(--font-numeric);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0;
+  word-break: break-all;
+}
+
+.contact-examples {
+  padding-bottom: 64px;
+}
+
+.example-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px auto 0;
+  max-width: 560px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.example-list li {
+  position: relative;
+  padding: 14px 20px 14px 34px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  text-align: left;
+}
+
+.example-list li::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sprout-light);
+}
+
+@media (min-width: 640px) {
+  .example-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
