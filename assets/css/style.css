@@ -402,12 +402,19 @@ footer.site-footer a {
   box-shadow: 0 10px 24px -10px rgba(47, 158, 79, 0.5);
 }
 
-.btn-primary--soon {
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 999px;
   background: var(--surface);
   color: var(--accent);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.02em;
   border: 1.5px solid var(--accent);
   box-shadow: none;
-  cursor: default;
 }
 
 .hero-visual {
