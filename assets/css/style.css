@@ -580,6 +580,16 @@ footer.site-footer a {
   filter: drop-shadow(0 12px 20px rgba(28, 40, 48, 0.15));
 }
 
+@media (max-width: 600px) {
+  .hero-cta-flanked {
+    flex-direction: column;
+  }
+
+  .hero-mascot {
+    height: 80px;
+  }
+}
+
 /* ---- タメルくん&ドパドパくん マスコット紹介 ---- */
 
 .mascot-duo {
