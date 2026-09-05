@@ -563,6 +563,65 @@ footer.site-footer a {
   color: var(--accent);
 }
 
+/* ---- ヒーローCTAを挟むマスコット ---- */
+
+.hero-cta-flanked {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-mascot {
+  height: 100px;
+  width: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 12px 20px rgba(28, 40, 48, 0.15));
+}
+
+/* ---- タメルくん&ドパドパくん マスコット紹介 ---- */
+
+.mascot-duo {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 28px auto 24px;
+  flex-wrap: wrap;
+}
+
+.mascot-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 190px;
+}
+
+.mascot-img {
+  height: 150px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 0 12px;
+  display: block;
+  filter: drop-shadow(0 16px 24px rgba(28, 40, 48, 0.15));
+}
+
+.mascot-card strong {
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.mascot-card span {
+  color: var(--ink-soft);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.mascot .btn-secondary {
+  margin-top: 8px;
+}
+
 /* ---- Features ---- */
 
 .features .section-inner {
