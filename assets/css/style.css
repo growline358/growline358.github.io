@@ -417,6 +417,10 @@ footer.site-footer a {
   box-shadow: none;
 }
 
+.hero-copy {
+  width: 100%;
+}
+
 .hero-visual {
   position: relative;
   display: flex;
@@ -571,6 +575,7 @@ footer.site-footer a {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+  max-width: 100%;
 }
 
 .hero-mascot {
@@ -581,12 +586,19 @@ footer.site-footer a {
 }
 
 @media (max-width: 600px) {
+  .hero-mascot {
+    height: 56px;
+  }
+}
+
+/* 極端に狭い旧型端末(iPhone SE 1st gen相当、幅320px級)のみ横並びが収まらないため縦積みにする */
+@media (max-width: 335px) {
   .hero-cta-flanked {
     flex-direction: column;
   }
 
   .hero-mascot {
-    height: 80px;
+    height: 64px;
   }
 }
 
