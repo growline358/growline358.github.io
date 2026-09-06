@@ -579,7 +579,7 @@ footer.site-footer a {
 }
 
 .hero-mascot {
-  height: 124px;
+  height: 56px;
   width: auto;
   flex-shrink: 0;
   filter: drop-shadow(0 12px 20px rgba(28, 40, 48, 0.15));
@@ -588,6 +588,13 @@ footer.site-footer a {
 .hero-cta-flanked .btn-primary {
   width: 172px;
   white-space: nowrap;
+}
+
+/* 極端に狭い旧型端末(iPhone SE 1st gen相当、幅320px級)のみ横並びが収まらないため縦積みにする */
+@media (max-width: 335px) {
+  .hero-cta-flanked {
+    flex-direction: column;
+  }
 }
 
 /* ---- タメルくん&ドパドパくん マスコット紹介 ---- */
