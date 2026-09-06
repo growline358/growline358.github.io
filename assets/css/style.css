@@ -573,35 +573,21 @@ footer.site-footer a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 8px;
   flex-wrap: wrap;
   max-width: 100%;
 }
 
 .hero-mascot {
-  height: 56px;
+  height: 124px;
   width: auto;
   flex-shrink: 0;
   filter: drop-shadow(0 12px 20px rgba(28, 40, 48, 0.15));
 }
 
-/* 極端に狭い旧型端末(iPhone SE 1st gen相当、幅320px級)のみ横並びが収まらないため縦積みにする */
-@media (max-width: 335px) {
-  .hero-cta-flanked {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero-mascot {
-    height: 64px;
-  }
-}
-
-/* 十分に幅のある画面では、ボタンの上下端にキャラの高さを揃える */
-@media (min-width: 440px) {
-  .hero-mascot {
-    height: 124px;
-  }
+.hero-cta-flanked .btn-primary {
+  width: 172px;
+  white-space: nowrap;
 }
 
 /* ---- タメルくん&ドパドパくん マスコット紹介 ---- */
