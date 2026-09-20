@@ -359,6 +359,10 @@ footer.site-footer a {
   flex-shrink: 0;
 }
 
+.hero-title-accent {
+  color: var(--accent);
+}
+
 .hero-title {
   font-size: clamp(28px, 7vw, 40px);
   font-weight: 700;
@@ -427,19 +431,10 @@ footer.site-footer a {
   justify-content: center;
 }
 
-.phone-frame {
-  position: relative;
-  width: 220px;
-  border-radius: 30px;
-  overflow: hidden;
-  border: 6px solid var(--ink);
-  background: var(--ink);
-  box-shadow: 0 28px 52px -22px rgba(28, 40, 48, 0.4);
-}
-
-.phone-frame img {
+.hero-mockup {
   display: block;
   width: 100%;
+  max-width: 320px;
   height: auto;
 }
 
@@ -462,8 +457,8 @@ footer.site-footer a {
   .hero-cta {
     align-items: flex-start;
   }
-  .phone-frame {
-    width: 250px;
+  .hero-mockup {
+    max-width: 380px;
   }
 }
 
