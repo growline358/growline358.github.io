@@ -457,6 +457,10 @@ footer.site-footer a {
   .hero-cta {
     align-items: flex-start;
   }
+  .hero-visual {
+    flex: 1;
+    min-width: 0;
+  }
   .hero-mockup {
     max-width: 380px;
   }
