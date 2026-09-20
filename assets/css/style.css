@@ -429,6 +429,8 @@ footer.site-footer a {
   position: relative;
   display: flex;
   justify-content: center;
+  min-width: 0;
+  width: 100%;
 }
 
 .hero-mockup {
@@ -436,6 +438,7 @@ footer.site-footer a {
   width: 100%;
   max-width: 320px;
   height: auto;
+  min-width: 0;
 }
 
 @media (min-width: 760px) {
