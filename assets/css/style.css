@@ -773,6 +773,16 @@ footer.site-footer a {
   }
 }
 
+.desktop-only {
+  display: none;
+}
+
+@media (min-width: 760px) {
+  .desktop-only {
+    display: inline;
+  }
+}
+
 /* ---- Scroll reveal（progressive enhancement） ---- */
 
 .reveal {
