@@ -484,6 +484,10 @@ footer.site-footer a {
   flex-shrink: 0;
 }
 
+.split-visual--illustrated {
+  max-width: 320px;
+}
+
 .split .split-visual img {
   width: 100%;
   height: auto;
@@ -513,6 +517,9 @@ footer.site-footer a {
   .split .split-body h2,
   .split .split-body p {
     margin-left: 0;
+  }
+  .split-visual--illustrated {
+    max-width: 380px;
   }
 }
 
