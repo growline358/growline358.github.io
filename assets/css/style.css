@@ -484,8 +484,12 @@ footer.site-footer a {
   flex-shrink: 0;
 }
 
-.split-visual--illustrated {
+.split .split-visual--illustrated {
   max-width: 320px;
+}
+
+.split .split-visual--duo {
+  max-width: 420px;
 }
 
 .split .split-visual img {
@@ -518,8 +522,11 @@ footer.site-footer a {
   .split .split-body p {
     margin-left: 0;
   }
-  .split-visual--illustrated {
+  .split .split-visual--illustrated {
     max-width: 380px;
+  }
+  .split .split-visual--duo {
+    max-width: 500px;
   }
 }
 
