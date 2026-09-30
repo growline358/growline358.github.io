@@ -616,18 +616,17 @@ footer.site-footer a {
 /* ---- タメルくん&ドパドパくん マスコット紹介 ---- */
 
 .mascot-duo {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 16px;
   margin: 28px auto 24px;
-  flex-wrap: wrap;
+  max-width: 420px;
 }
 
 .mascot-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 190px;
 }
 
 .mascot-img {
