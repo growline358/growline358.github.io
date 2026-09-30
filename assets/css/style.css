@@ -701,52 +701,6 @@ footer.site-footer a {
   }
 }
 
-/* ---- App Preview ---- */
-
-.app-preview .section-inner {
-  max-width: var(--width-landing);
-  text-align: center;
-}
-
-.preview-scroll {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding: 28px 4px 12px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.preview-item {
-  flex: 0 0 auto;
-  width: 190px;
-  scroll-snap-align: center;
-  text-align: center;
-}
-
-.preview-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 18px;
-  box-shadow: 0 18px 36px -20px rgba(28, 40, 48, 0.32);
-}
-
-.preview-item span {
-  display: block;
-  margin-top: 10px;
-  font-size: 13px;
-  color: var(--ink-soft);
-}
-
-@media (min-width: 760px) {
-  .preview-scroll {
-    overflow: visible;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
 /* ---- CTA (最終) ---- */
 
 .cta-final {
